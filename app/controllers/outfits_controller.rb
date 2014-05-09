@@ -1,3 +1,5 @@
+require 'pry'
+
 class OutfitsController < ApplicationController
   before_action :set_outfit, only: [:show, :edit, :update, :destroy]
 
