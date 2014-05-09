@@ -1,0 +1,16 @@
+<video id='feed' src=''></video>
+<script>
+  navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
+
+  navigator.getUserMedia({
+    video: true
+  }, function(stream) {
+    var video;
+    video = document.getElementById('feed');
+    video.src = window.URL.createObjectURL(stream);
+    video.play();
+  }, function(err) {
+    return console.log(err);
+  });
+
+</script>

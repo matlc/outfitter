@@ -1,0 +1,28 @@
+<video id='feed'></video>
+
+<script>
+navigator.getUserMedia = ( navigator.getUserMedia ||
+                       navigator.webkitGetUserMedia ||
+                       navigator.mozGetUserMedia ||
+                       navigator.msGetUserMedia);
+
+navigator.getUserMedia (
+
+   // constraints
+   {
+      video: true
+   },
+
+   // successCallback
+   function(localMediaStream) {
+      var video = document.getElementById('feed');
+      video.src = window.URL.createObjectURL(localMediaStream);
+   },
+
+   // errorCallback
+   function(err) {
+    console.log("The following error occured: " + err);
+   }
+
+);
+</script>

@@ -1,0 +1,14 @@
+<h1>New outfit</h1>
+
+<p>From your webcam:</p>
+
+<video id='feed' src=''></video>
+
+<canvas id='canvas-pic'></canvas>
+
+<button id='take-photo'>Take photo</button>
+
+<%= render 'form' %>
+<%= hidden_field_tag 'image_data' %>
+
+<%= link_to 'Back', outfits_path %>
